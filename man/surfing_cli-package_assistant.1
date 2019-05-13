@@ -1,0 +1,46 @@
+.TH "SURFING_CLI PACKAGE_ASSISTANT" "1" "27-Sep-2018" "2.0" "surfing_cli package_assistant Manual"
+.SH NAME
+surfing_cli\-package_assistant \- 命令：包助理。 用于：包分析，包清理等等
+.SH SYNOPSIS
+.B surfing_cli package_assistant
+[OPTIONS] PACKAGES_PATH
+.SH DESCRIPTION
+命令：包助理。
+用于：包分析，包清理等等
+.SH OPTIONS
+.TP
+\fB\-page,\fP \-\-result_echo_via_pager / \-\-no_result_echo_via_pager
+运行结果是否分页显示,默认不分页
+.TP
+\fB\-o,\fP \-\-result_write_file / \-\-no_result_write_file
+运行结果是否写入文件，默认不会写入文件，结果将写入当前目录下的package_analysis_new_result.txt
+.TP
+\fB\-excel,\fP \-\-package_info_write_excel_file / \-\-no_package_info_write_excel_file
+是否生成所有包详情的excel文件，默认不生成，生成文件在当前目录下,package_info.xls
+.TP
+\fB\-\-delete_unknown_folder\fP / \-\-no_delete_unknown_folder
+是否删除包中的未知目录(m4a mp3 temp),默认不删除
+.TP
+\fB\-r,\fP \-\-replace_folder_wav_files / \-\-no_replace_folder_wav
+如果有wav目录是否吧里面的文件都放在外面并删除wav,默认不会
+.TP
+\fB\-\-rename_endswith_u_file\fP / \-\-no_rename_endswith_u_file
+如果存在.u文件 是否去掉文件名后缀.u，默认不会，如果去掉.u后的文件存在的话、将先删除然后重命名
+.TP
+\fB\-\-delete_duplicated_underline_number_file\fP / \-\-no_delete_duplicated_underline_number_file
+如果存在 xxx_1.wav|txt 文件是否进行删除，默认不删除
+.TP
+\fB\-\-delete_unknown_suffix_file\fP / \-\-no_delete_unknown_suffix_file
+是否删除后缀 skip、sk、pk等文件，默认不会删除
+.TP
+\fB\-decrypt,\fP \-\-decrypt_endswith_enc_file / \-\-no_decrypt_endswith_enc_file
+是否针对加密文件进行解密，默认不会
+.TP
+\fB\-\-delete_single_txt\fP / \-\-no_delete_single_txt
+是否删除没有对应音频的txt文件，默认不删除
+.TP
+\fB\-q,\fP \-\-quiet / \-\-no_quiet
+是否静默运行，除了进度条以外不输出任何信息，默认会输出
+.TP
+\fB\-\-auto_clean\fP / \-\-no_auto_clean
+是否自动清理包中的已知问题，默认不会。
